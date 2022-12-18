@@ -19,6 +19,7 @@ namespace Alura.Estacionamento.Testes
         }
 
         [Fact(DisplayName = "Teste Veículo - Frear")]
+        [Trait("Funcionalidade", "Acelerar")]
         public void TestaVeiculoFrear()
         {
             // Arrange - Preparação do ambiente para os testes 
@@ -30,6 +31,7 @@ namespace Alura.Estacionamento.Testes
         }
 
         [Fact(DisplayName = "Teste Veículo - Tipo (Automóvel)")]
+        [Trait("Funcionalidade", "Frear")]
         public void TestaTipoVeiculo()
         {
             // Arrange
