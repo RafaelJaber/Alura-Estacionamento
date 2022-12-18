@@ -7,7 +7,7 @@ namespace Alura.Estacionamento.Testes
 {
     public class VeiculoTestes
     {
-        [Fact]
+        [Fact(DisplayName = "Teste Veículo - Acelerar")]
         public void TestaVeiculoAcelerar()
         {
             // Arrange - Preparação do ambiente para os testes 
@@ -18,7 +18,7 @@ namespace Alura.Estacionamento.Testes
             Assert.Equal(100, veiculo.VelocidadeAtual);
         }
 
-        [Fact]
+        [Fact(DisplayName = "Teste Veículo - Frear")]
         public void TestaVeiculoFrear()
         {
             // Arrange - Preparação do ambiente para os testes 
@@ -29,7 +29,7 @@ namespace Alura.Estacionamento.Testes
             Assert.Equal(-150, veiculo.VelocidadeAtual);
         }
 
-        [Fact]
+        [Fact(DisplayName = "Teste Veículo - Tipo (Automóvel)")]
         public void TestaTipoVeiculo()
         {
             // Arrange
@@ -39,7 +39,7 @@ namespace Alura.Estacionamento.Testes
             Assert.Equal(TipoVeiculo.Automovel, veiculo.Tipo);
         }
 
-        [Fact(Skip = "Teste ainda não implementado - ignorar")]
+        [Fact(Skip = "Teste ainda não implementado - ignorar", DisplayName = "Teste Veículo - Tipo (Motocicleta)")]
         public void TestaTipoVeiculoMotocicleta()
         {
             // Arrange

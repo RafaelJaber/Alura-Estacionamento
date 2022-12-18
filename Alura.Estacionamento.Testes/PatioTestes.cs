@@ -11,7 +11,7 @@ namespace Alura.Estacionamento.Testes
 {
     public class PatioTestes
     {
-        [Fact]
+        [Fact(DisplayName = "Teste Patio - Faturamento (Automóvel)")]
         public void ValidaFaturamentoAutomovel()
         {
             // Arrange
@@ -33,7 +33,7 @@ namespace Alura.Estacionamento.Testes
             Assert.Equal(2, faturamento);
         }
 
-        [Fact]
+        [Fact(DisplayName = "Teste Patio - Faturamento (Motocicleta)")]
         public void ValidaFaturamentoMotocicleta()
         {
             // Arrange
@@ -55,7 +55,7 @@ namespace Alura.Estacionamento.Testes
             Assert.Equal(1, faturamento);
         }
 
-        [Theory]
+        [Theory(DisplayName = "Teste Patio - Faturamento (Automóvel) - Multiplos")]
         [InlineData("Rafael", "ASD-1498", "Preto", "M3")]
         [InlineData("Lívia", "ASD-1499", "Azul", "Audi A8")]
         [InlineData("Juliana", "ASD-1490", "Prata", "Corolla")]
