@@ -77,5 +77,27 @@ namespace Alura.Estacionamento.Testes
             // Assert
             Assert.Equal(2, faturamento);
         }
+
+        [Theory(DisplayName = "Teste Patio - Localizar por Placa")]
+        [InlineData("Rafael", "ASD-1498", "Preto", "M3")]
+        [InlineData("Lívia", "ASD-1499", "Azul", "Audi A8")]
+        [InlineData("Juliana", "ASD-1490", "Prata", "Corolla")]
+        public void LocalizaVeiculoNoPatio(string proprietario, string placa, string cor, string modelo)
+        {
+            // Arrange
+            Patio estacionamento = new Patio();
+            Veiculo veiculo = new Veiculo();
+            veiculo.Proprietario = proprietario;
+            veiculo.Placa = placa;
+            veiculo.Cor = cor;
+            veiculo.Modelo = modelo;
+            estacionamento.RegistrarEntradaVeiculo(veiculo);
+
+            // Act
+            Veiculo consultado = estacionamento.PesquisaVeiculo(placa);
+
+            // Assert
+            Assert.Equal(placa, consultado.Placa);
+        }
     }
 }
