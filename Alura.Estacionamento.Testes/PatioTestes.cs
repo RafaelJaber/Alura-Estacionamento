@@ -94,10 +94,10 @@ namespace Alura.Estacionamento.Testes
             estacionamento.RegistrarEntradaVeiculo(veiculo);
 
             // Act
-            Veiculo consultado = estacionamento.PesquisaVeiculo(placa);
+            Veiculo consultado = estacionamento.PesquisaVeiculo(veiculo.IdTicket);
 
             // Assert
-            Assert.Equal(placa, consultado.Placa);
+            Assert.Equal(veiculo.IdTicket, consultado.IdTicket);
         }
 
         [Fact]
