@@ -22,6 +22,10 @@ namespace Alura.Estacionamento.Testes
             veiculo.Cor = "Azul";
             veiculo.Modelo = "Fusca";
             veiculo.Placa = "ASD-9999";
+            Operador operador = new Operador();
+            operador.Nome = "Lucieli";
+
+            estacionamento.OperadorPatio = operador;
             
             estacionamento.RegistrarEntradaVeiculo(veiculo);
             estacionamento.RegistrarSaidaVeiculo(veiculo.Placa);
@@ -44,7 +48,10 @@ namespace Alura.Estacionamento.Testes
             veiculo.Cor = "Azul";
             veiculo.Modelo = "Biz";
             veiculo.Placa = "ASD-9999";
+            Operador operador = new Operador();
+            operador.Nome = "Lucieli";
 
+            estacionamento.OperadorPatio = operador;
             estacionamento.RegistrarEntradaVeiculo(veiculo);
             estacionamento.RegistrarSaidaVeiculo(veiculo.Placa);
 
@@ -68,6 +75,10 @@ namespace Alura.Estacionamento.Testes
             veiculo.Placa = placa;
             veiculo.Cor = cor;
             veiculo.Modelo = modelo;
+            Operador operador = new Operador();
+            operador.Nome = "Lucieli";
+
+            estacionamento.OperadorPatio = operador;
             estacionamento.RegistrarEntradaVeiculo(veiculo);
             estacionamento.RegistrarSaidaVeiculo(veiculo.Placa);
 
@@ -91,6 +102,10 @@ namespace Alura.Estacionamento.Testes
             veiculo.Placa = placa;
             veiculo.Cor = cor;
             veiculo.Modelo = modelo;
+            Operador operador = new Operador();
+            operador.Nome = "Lucieli";
+
+            estacionamento.OperadorPatio = operador;
             estacionamento.RegistrarEntradaVeiculo(veiculo);
 
             // Act
@@ -111,6 +126,10 @@ namespace Alura.Estacionamento.Testes
             veiculo.Cor = "Azul";
             veiculo.Modelo = "Fusca";
             veiculo.Placa = "ASD-9999";
+            Operador operador = new Operador();
+            operador.Nome = "Lucieli";
+
+            estacionamento.OperadorPatio = operador;
             estacionamento.RegistrarEntradaVeiculo(veiculo);
 
             Veiculo veiculoAlterado = new Veiculo();

@@ -20,6 +20,10 @@ namespace Alura.Estacionamento.Modelos
         }
         private List<Veiculo> veiculos;
         private double faturado;
+        private Operador _operador;
+
+        public Operador OperadorPatio { get => _operador; set => _operador = value; }
+
         public double Faturado { get => faturado; set => faturado = value; }
         public List<Veiculo> Veiculos { get => veiculos; set => veiculos = value; }       
         public double TotalFaturado()
@@ -108,9 +112,10 @@ namespace Alura.Estacionamento.Modelos
         {
             veiculo.IdTicket = new Guid().ToString().Substring(0, 5);
             string ticket = "###Ticket Estacionamento Alura###" +
-                            $"Identifcador: {veiculo.IdTicket}" +
-                            $"Data/Hora de entrada: {DateTime.Now}" +
-                            $"Placa do Veículo:{veiculo.Placa}";
+                            $">>> Identifcador: {veiculo.IdTicket}" +
+                            $">>> Data/Hora de entrada: {DateTime.Now}" +
+                            $">>> Placa do Veículo:{veiculo.Placa}" +
+                            $">>> Operador Patio: {this.OperadorPatio.Nome}";
             veiculo.Ticket = ticket;
             return ticket;
         }
